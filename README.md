@@ -1,6 +1,6 @@
-`\set-progid-nvim-qt\*.reg` adds/removes the `Applications/nvim-qt.exe` program ID in Windows Registry.
+`\set-progid-nvim-qt\*.reg` adds/removes the `Applications\nvim-qt.exe` program ID in Windows Registry.
 
-`\set-context-menu-edit-with-neovim\*.reg` adds/removes `Edit with Neovim` right click file and directory context menu item which corresponds to `Applications/nvim-qt.exe` program ID.
+`\set-context-menu-edit-with-neovim\*.reg` adds/removes `Edit with Neovim` right click file and directory context menu item which corresponds to `Applications\nvim-qt.exe` program ID.
 
 `\set-file-assocations\set-associations.bat + associations-list.conf` associates the `Applications/nvim-qt.exe` program ID with a long list of plaintext file format extensions.
 
