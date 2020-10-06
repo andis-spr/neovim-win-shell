@@ -1,3 +1,5 @@
+A set of scripts for integrating Neovim Qt executable with Windows Explorer — registering a program ID, creating file associations and adding the `Edit with Neovim` file & folder context menu option.
+
 IMPORTANT: Set the `nvim-qt.exe` location path in `\*\*.reg` files and the `\set-file-associations\associations-list.conf` contents according to YOUR setup and requirements before applying them.
 
 ## Actions
