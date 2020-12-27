@@ -2,8 +2,8 @@ Set Neovim Qt as the default text editor in Windows
 
 # Pre-setup
 - set your `nvim-qt.exe` installation path in `set-progid-nvim-qt\*.reg` and `set-context-menu-edit-with-neovim\*.reg`
-- adjust the list of file types that will be opened with Neovim Qt in `set-file-associations\associations-list.conf`
-- install [`setUserFTA` utility](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) required for setting file associations
+- install [`setUserFTA`](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) which is required for setting file associations
+- adjust the file types that will be associated with Neovim Qt in `set-file-associations\associations-list.conf`
 
 # Setup
 1. Use `set-progid-nvim-qt\*.reg` registry keys to add or remove the `Applications\nvim-qt.exe` program ID in Windows Registry
