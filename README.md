@@ -7,13 +7,13 @@ Put the full path of your `nvim-qt.exe` executable as the first line of `nvim-qt
 
 Optionally — edit the list of file extensions that will be associated with Neovim Qt in `file-associations.txt`.
 
-Run `nvim-qt-win-shell-ADD.bat` to
+Run `nvim-qt-win-shell-ADD.bat` as Administrator to
 - register Neovim Qt `ProgID`
 - register Neovim Qt file associations
 - add the `Edit with Neovim` file and directory right-click context menu item
 
 ## Removal
-Run `nvim-qt-win-shell-REMOVE.bat` to
+Run `nvim-qt-win-shell-REMOVE.bat` as Administrator to
 - unregister Neovim Qt `ProgID`
 - unregister Neovim Qt file associations
 - remove the `Edit with Neovim` file and directory right-click context menu item
