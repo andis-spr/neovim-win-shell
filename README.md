@@ -13,7 +13,7 @@ Then run the `nvim-qt-win-shell-ADD.bat` script as administrator to
 - register Neovim Qt file associations
 - add the `Edit with Neovim` file and directory right-click context menu item
 
-Be aware that on the first run this script downloads the [`SetUserFTA`](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility from the author's homepage saving it in the same directory. It is being used in the script for adding the file associations to Windows Registry.
+Be aware that on the first run this script downloads ZIP archive of the [`SetUserFTA`](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility executable from the author's homepage, saving it in the same directory. It is extracted and run in the script for adding the file associations to Windows Registry.
 
 ## Removal
 Run the `nvim-qt-win-shell-REMOVE.bat` script as administrator to
