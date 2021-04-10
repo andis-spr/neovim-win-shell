@@ -41,18 +41,12 @@ goto :SetUserFTASetup
 :: Set nvim-qt.exe ProgID
 echo[
 echo Setting nvim-qt.exe ProgID...
-reg add "HKCR\Applications\nvim-qt.exe" /f
-reg add "HKCR\Applications\nvim-qt.exe\shell" /f
-reg add "HKCR\Applications\nvim-qt.exe\shell\open" /f
-reg add "HKCR\Applications\nvim-qt.exe\shell\open\command" /f
 reg add "HKCR\Applications\nvim-qt.exe\shell\open\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 
 :: Set Explorer file & directory 'Edit with Neovim' context menu item
 echo[
 echo Setting Explorer file ^& directory 'Edit with Neovim' context menu item...
-reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim" /f
 reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
-reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim\command" /f
 reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 
 :: Set file associations from .\file-associations.txt
