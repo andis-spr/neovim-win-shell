@@ -19,6 +19,6 @@ Run the `nvim-qt-win-shell-REMOVE.bat` script as an administrator to
 
 ## General information
 
- - **Please be aware that on the first run `nvim-qt-win-shell-ADD.bat` script downloads a third-party [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility ZIP archive from the author's homepage**, saving it in the same directory. It is then extracted and ran in the script for adding the file associations to Windows Registry.
+ - **Please be aware that on the first run the `nvim-qt-win-shell-ADD.bat` script downloads a third-party [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility ZIP archive from the author's homepage**, saving it in the same directory. It is then extracted and ran in the script for adding the file associations to Windows Registry.
 
 - It's advised NOT changing `.bat`, `.cmd`, `.vb` and `.vbs` file extension default program associations as it will override Windows file opener default actions for these files, breaking various third-party scripts.
