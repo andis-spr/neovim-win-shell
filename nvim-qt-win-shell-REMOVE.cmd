@@ -6,9 +6,9 @@ echo[
 echo Unsetting nvim-qt.exe ProgID and coresponding file associations...
 reg delete "HKCR\Applications\nvim-qt.exe" /f
 
-:: Unset file & directory 'Edit with Neovim' context menu item
+:: Unset Explorer file & directory 'Edit with Neovim' context menu item
 echo[
-echo Unsetting file ^& directory 'Edit with Neovim' context menu item...
+echo Unsetting Explorer file ^& directory 'Edit with Neovim' context menu item...
 reg delete "HKCR\AllFilesystemObjects\shell\Edit with Neovim" /f
 
 echo[
