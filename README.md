@@ -4,7 +4,7 @@
 Set Neovim Qt as the default text editor on Windows (Explorer file associations, file & directory context menu item).
 ## Setup
 
-Clone this repo locally and put the full path of your `nvim-qt.exe` executable as the first line of `nvim-qt-exe-path.txt`. Optionally — edit the list of file extensions that will be associated with Neovim Qt in `file-associations.txt`.
+Clone this repo locally and put the full path of your `nvim-qt.exe` executable as the first line of `nvim-qt.exe-path.txt`. Optionally — edit the list of file extensions that will be associated with Neovim Qt in `file-associations.txt`.
 
 It's advised NOT changing `.bat`, `.cmd`, `.vb` and `.vbs` file extension default program associations as it will override Windows file opener default actions for these files, breaking various third-party scripts.
 
