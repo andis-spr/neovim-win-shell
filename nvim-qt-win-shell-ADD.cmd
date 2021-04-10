@@ -48,8 +48,8 @@ echo[
 echo Setting Explorer file, directory ^& drive 'Edit with Neovim' context menu item...
 reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
 reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
-reg add "HKCR\Drive\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 reg add "HKCR\Drive\shell\Edit with Neovim" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
+reg add "HKCR\Drive\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 
 :: Set file associations from .\file-associations.txt
 echo[
