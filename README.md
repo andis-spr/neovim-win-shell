@@ -1,22 +1,19 @@
 # neovim-qt-win-shell
-Set Neovim Qt as the default text editor on Windows (file associations, context menu item).
+Set Neovim Qt as the default text editor on Windows (file associations, file & directory context menu item).
 
-## Pre-setup
+## Setup
 
-Put path of your `nvim-qt.exe` file as the first line of `nvim-qt-exe-path.txt`.
+Put the full path of your `nvim-qt.exe` executable as the first line of `nvim-qt-exe-path.txt`.
 
-### Optional
-Edit the list of file extensions that will be associated with Neovim Qt in `nvim-qt-file-associations.txt`.
+Optionally — edit the list of file extensions that will be associated with Neovim Qt in `file-associations.txt`.
 
-## Usage
-### Set
-Run `nvim-qt-win-shell-SET.bat` to
-- set Neovim Qt `ProgID`
-- set Neovim Qt file associations
-- set `Edit with Neovim` file and directory context menu item
+Run `nvim-qt-win-shell-ADD.bat` to
+- register Neovim Qt `ProgID`
+- register Neovim Qt file associations
+- add the `Edit with Neovim` file and directory right-click context menu item
 
-### Unset
-Run `nvim-qt-win-shell-UNSET.bat` to
-- unset Neovim Qt `ProgID`
-- unset Neovim Qt file associations
-- unset `Edit with Neovim` file and directory context menu item
+## Removal
+Run `nvim-qt-win-shell-REMOVE.bat` to
+- unregister Neovim Qt `ProgID`
+- unregister Neovim Qt file associations
+- remove the `Edit with Neovim` file and directory right-click context menu item
