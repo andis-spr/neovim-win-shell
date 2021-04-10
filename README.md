@@ -8,7 +8,7 @@ Clone this repo locally and put the full path of your `nvim-qt.exe` executable a
 
 It's advised NOT changing `.bat`, `.cmd`, `.vb` and `.vbs` file extension default program associations as it will override Windows file opener default actions for these files, breaking various third-party scripts.
 
-Then run the `nvim-qt-win-shell-ADD.bat` script as administrator to
+Then run the `nvim-qt-win-shell-ADD.bat` script as an administrator to
 - register Neovim Qt `ProgID`
 - register Neovim Qt file associations
 - add the `Edit with Neovim` file and directory right-click context menu item
@@ -16,7 +16,7 @@ Then run the `nvim-qt-win-shell-ADD.bat` script as administrator to
 Be aware that on the first run this script downloads ZIP archive of the [`SetUserFTA`](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility executable from the author's homepage, saving it in the same directory. It is extracted and run in the script for adding the file associations to Windows Registry.
 
 ## Removal
-Run the `nvim-qt-win-shell-REMOVE.bat` script as administrator to
+Run the `nvim-qt-win-shell-REMOVE.bat` script as an administrator to
 - unregister Neovim Qt `ProgID`
 - unregister Neovim Qt file associations
 - remove the `Edit with Neovim` file and directory right-click context menu item
