@@ -9,7 +9,7 @@ Put the full path of your `nvim-qt.exe` executable as the first line of `nvim-qt
 Optionally — edit the list of file extensions that will be associated with Neovim Qt in `file-associations.txt`.
 
 ---
-It's advised NOT changing `.bat`, `.cmd`, `.vb` and `.vbs` file extensions default program associations as it will override Windows file opener default actions for these files, breaking various third-party scripts.
+It's advised NOT changing `.bat`, `.cmd`, `.vb` and `.vbs` file extension default program associations as it will override Windows file opener default actions for these files, breaking various third-party scripts.
 
 ---
 
