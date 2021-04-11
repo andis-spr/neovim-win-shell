@@ -9,15 +9,17 @@ set setUserFTAURL=https://kolbi.cz/SetUserFTA.zip
 set downloadCMD=bitsadmin /transfer myDownloadJob /download /priority normal
 set nvimQtExePathFile=%~dp0nvim-qt.exe-path.txt
 set nvimQtFileAssociationsFile=%~dp0file-associations.txt
+set editWithNvimQtString=Edit with Neovim
+set nvimQtExeString=nvim-qt.exe
 
 for /f %%a in (%nvimQtExePathFile%) do (
   set nvimQtExePath=%%a
   break
 )
 
-:: Setup SetUserFTA utility to add nvim-qt.exe ProgID file associations
+:: Setup SetUserFTA utility to add ProgID file associations
 echo[
-echo Setting up SetUserFTA utility to add nvim-qt.exe ProgID file associations...
+echo Setting up SetUserFTA utility to add %nvimQtExeString% ProgID file associations...
 :SetUserFTASetup
 if exist %setUserFTAExe% (
   goto :MainSetup
@@ -38,22 +40,22 @@ goto :SetUserFTASetup
 
 :MainSetup
 
-:: Set nvim-qt.exe ProgID
+:: Set ProgID
 echo[
 echo Setting nvim-qt.exe ProgID...
-reg add "HKCR\Applications\nvim-qt.exe\shell\open\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+reg add "HKCR\Applications\%nvimQtExeString%\shell\open\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 
-:: Set Explorer file, directory & drive 'Edit with Neovim' context menu item
+:: Set Explorer file, directory & drive context menu item
 echo[
-echo Setting Explorer file, directory ^& drive 'Edit with Neovim' context menu item...
-reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
-reg add "HKCR\AllFilesystemObjects\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
-reg add "HKCR\Drive\shell\Edit with Neovim" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
-reg add "HKCR\Drive\shell\Edit with Neovim\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+echo Setting Explorer file, directory ^& drive '%editWithNvimQtString%' context menu item...
+reg add "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
+reg add "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+reg add "HKCR\Drive\shell\%editWithNvimQtString%" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
+reg add "HKCR\Drive\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
 
-:: Set file associations from .\file-associations.txt
+:: Set file associations
 echo[
-echo Setting file associations from .\file-associations.txt...
+echo Setting the file associations...
 %setUserFTAExe% %nvimQtFileAssociationsFile%
 
 echo[
