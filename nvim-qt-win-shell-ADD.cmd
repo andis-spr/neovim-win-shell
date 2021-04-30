@@ -43,15 +43,15 @@ goto :SetUserFTASetup
 :: Set ProgID
 echo[
 echo Setting nvim-qt.exe ProgID...
-reg add "HKCR\Applications\%nvimQtExeString%\shell\open\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+reg add "HKCR\Applications\%nvimQtExeString%\shell\open\command" /t REG_SZ /d "%nvimQtExePath% ""%%1""" /f
 
 :: Set Explorer file, directory & drive context menu item
 echo[
 echo Setting Explorer file, directory ^& drive '%editWithNvimQtString%' context menu item...
 reg add "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
-reg add "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+reg add "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% ""%%1""" /f
 reg add "HKCR\Drive\shell\%editWithNvimQtString%" /v Icon /t REG_SZ /d "%nvimQtExePath%" /f
-reg add "HKCR\Drive\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% %%1" /f
+reg add "HKCR\Drive\shell\%editWithNvimQtString%\command" /t REG_SZ /d "%nvimQtExePath% ""%%1""" /f
 
 :: Set file associations
 echo[
