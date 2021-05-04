@@ -1,5 +1,4 @@
-neovim-qt-win-shell - Set Neovim Qt as the default text editor on Windows
-(Explorer file associations, file & directory context menu item).
+neovim-qt-win-shell - Set Neovim Qt file type associations and add "Edit with Neovim" right click context menu item on Windows.
 Copyright © 2021 Andis Spriņķis
 
 Permission is hereby granted, free of charge, to any person obtaining

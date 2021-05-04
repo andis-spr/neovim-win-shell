@@ -8,7 +8,7 @@ set setUserFTAExe=%setUserFTADir%\SetUserFTA\SetUserFTA.exe
 set setUserFTAURL=https://kolbi.cz/SetUserFTA.zip
 set downloadCMD=bitsadmin /transfer myDownloadJob /download /priority normal
 set nvimQtExePathFile=%~dp0nvim-qt.exe-path.txt
-set nvimQtFileAssociationsFile=%~dp0file-associations.txt
+set nvimQtFileAssociationsFile=%~dp0file-type-associations.txt
 set editWithNvimQtString=Edit with Neovim
 set nvimQtExeString=nvim-qt.exe
 
@@ -63,6 +63,7 @@ echo FINISHED
 endlocal
 exit /B %errorlevel%
 
+:: VBS to exract ZIP files
 :UnZipFile <ExtractTo> <newzipfile>
 set extractVBS="%temp%\extractVBS.vbs"
 if exist %extractVBS% del /f /q %extractVBS%
