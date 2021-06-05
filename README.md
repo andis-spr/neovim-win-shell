@@ -19,6 +19,6 @@ Run the `setup-REMOVE-nvim-qt-win-shell.cmd` script as an administrator to
 
 ## General information
 
- - **Please be aware that on the first run the `nvim-qt-win-shell-ADD.bat` script downloads a third-party [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility ZIP file from the author's homepage**, saving and extracting it in the same directory. It is used within the script for adding the file type associations to Windows Registry.
+ - **Please be aware that on the first run the `setup-ADD-nvim-qt-win-shell.cmd` script downloads a third-party [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) utility ZIP file from the author's homepage**, saving and extracting it in the same directory. It is used within the script for adding the file type associations to Windows Registry.
 
-- It's advised NOT adding `.bat`, `.cmd`, `.vb` and `.vbs` file name extensions to `file-type-associations.txt`, as changing them will override Windows file opener default actions for these files, breaking various third-party scripts.
+- It's advised NOT adding `.bat`, `.cmd`, `.vb` and `.vbs` file name extensions to `config-file-type-associations.txt`, as changing them will override Windows file opener default actions for these files, breaking various third-party scripts.
