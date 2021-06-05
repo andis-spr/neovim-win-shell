@@ -4,14 +4,14 @@ setlocal
 set editWithNvimQtString=Edit with Neovim
 set nvimQtExeString=nvim-qt.exe
 
-:: Unset ProgID and coresponding file associations
+:: Remove ProgID and coresponding file associations
 echo[
-echo Unsetting %nvimQtExeString% ProgID and coresponding file associations...
+echo Removing %nvimQtExeString% ProgID and coresponding file associations...
 reg delete "HKCR\Applications\%nvimQtExeString%" /f
 
-:: Unset Explorer file, directory & drive context menu item
+:: Remove Explorer file, directory & drive context menu option
 echo[
-echo Unsetting Explorer file, directory ^& drive '%editWithNvimQtString%' context menu item...
+echo Removing Explorer file, directory ^& drive '%editWithNvimQtString%' context menu option...
 reg delete "HKCR\AllFilesystemObjects\shell\%editWithNvimQtString%" /f
 reg delete "HKCR\Drive\shell\%editWithNvimQtString%" /f
 

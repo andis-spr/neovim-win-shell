@@ -1,21 +1,21 @@
 # neovim-qt-win-shell
-![Screenshot demonstrating 'Edit with Neovim' Windows Explorer directory right click context menu item and Neovim Qt being associated with various text files.](https://i.imgur.com/SE9ia2U.png)
+![Screenshot demonstrating 'Edit with Neovim' Windows Explorer directory right click context menu item and Neovim Qt being associated with various text file types.](https://i.imgur.com/SE9ia2U.png)
 
 Set Neovim Qt file type associations and add "Edit with Neovim" right click context menu item on Windows.
 
 ## Adding
 
-- `nvim-qt.exe-path.txt` — put the full path of your `nvim-qt.exe` in the first line of this file.
-- `file-type-associations.txt` — set the list of file name extensions that will be associated with Neovim Qt.
+- `config-nvim-qt-exe-path.txt` — put the full path of your `nvim-qt.exe` in the first line of this file.
+- `config-file-type-associations.txt` — set the list of file name extensions that will be associated with Neovim Qt.
 
-Run the `nvim-qt-win-shell-ADD.bat` script as an administrator to
+Run the `setup-ADD-nvim-qt-win-shell.bat` script as an administrator to
  - register Neovim Qt `ProgID` and file associations
- - add the `Edit with Neovim` right-click context menu item
+ - add the `Edit with Neovim` option to right-click context menu
 
-## Removal
-Run the `nvim-qt-win-shell-REMOVE.bat` script as an administrator to
+## Removing
+Run the `setup-REMOVE-nvim-qt-win-shell.bat` script as an administrator to
 - unregister Neovim Qt `ProgID` and file associations
-- remove the `Edit with Neovim` right-click context menu item
+- remove the `Edit with Neovim` option from right-click context menu
 
 ## General information
 
