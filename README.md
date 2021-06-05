@@ -1,5 +1,5 @@
 # neovim-qt-win-shell
-![Screenshot demonstrating 'Edit with Neovim' Windows Explorer directory right click context menu item and Neovim Qt being associated with various text file types.](https://i.imgur.com/SE9ia2U.png)
+!['Edit with Neovim' Windows Explorer directory right click context menu option being visible; Neovim Qt being associated with various text file types - indicated by program icon](https://github.com/andis-sprinkis/neovim-qt-win-shell/blob/media/preview.png)
 
 Set Neovim Qt file type associations and add "Edit with Neovim" right click context menu item on Windows.
 
