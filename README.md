@@ -8,12 +8,12 @@ Set Neovim Qt file type associations and add "Edit with Neovim" right click cont
 - `config-nvim-qt-exe-path.txt` — put the full path of your `nvim-qt.exe` in the first line of this file.
 - `config-file-type-associations.txt` — set the list of file name extensions that will be associated with Neovim Qt.
 
-Run the `setup-ADD-nvim-qt-win-shell.bat` script as an administrator to
+Run the `setup-ADD-nvim-qt-win-shell.cmd` script as an administrator to
  - register Neovim Qt `ProgID` and file associations
  - add the `Edit with Neovim` option to right-click context menu
 
 ## Removing
-Run the `setup-REMOVE-nvim-qt-win-shell.bat` script as an administrator to
+Run the `setup-REMOVE-nvim-qt-win-shell.cmd` script as an administrator to
 - unregister Neovim Qt `ProgID` and file associations
 - remove the `Edit with Neovim` option from right-click context menu
 
