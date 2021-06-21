@@ -4,7 +4,6 @@ cd /d %~dp0
 
 set setUserFTAZip=%~dp0SetUserFTA.zip
 set setUserFTADir=%~dp0SetUserFTA
-echo %setUserFTADir%
 set setUserFTAExe=%setUserFTADir%\SetUserFTA\SetUserFTA.exe
 set setUserFTAURL=https://kolbi.cz/SetUserFTA.zip
 set downloadCMD=bitsadmin /transfer myDownloadJob /download /priority normal
