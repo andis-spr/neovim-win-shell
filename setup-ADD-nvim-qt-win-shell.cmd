@@ -4,6 +4,7 @@ cd /d %~dp0
 
 set setUserFTAZip=%~dp0SetUserFTA.zip
 set setUserFTADir=%~dp0SetUserFTA
+echo %setUserFTADir%
 set setUserFTAExe=%setUserFTADir%\SetUserFTA\SetUserFTA.exe
 set setUserFTAURL=https://kolbi.cz/SetUserFTA.zip
 set downloadCMD=bitsadmin /transfer myDownloadJob /download /priority normal
@@ -29,14 +30,14 @@ if exist %setUserFTAExe% (
   echo - Unzipping SetUserFTA utility...
   call :UnZipFile "%setUserFTADir%" "%setUserFTAZip%"
   rm %setUserFTAZip%
+  goto :MainSetup
 ) else (
   :: Download SetUserFTA utility
   echo[
   echo - Downloading SetUserFTA utility...
   %downloadCMD% %setUserFTAURL% %setUserFTAZip%
+  goto :SetUserFTASetup
 )
-
-goto :SetUserFTASetup
 
 :MainSetup
 
@@ -65,17 +66,17 @@ exit /B %errorlevel%
 
 :: VBS to exract ZIP files
 :UnZipFile <ExtractTo> <newzipfile>
-set extractVBS="%temp%\extractVBS.vbs"
-if exist %extractVBS% del /f /q %extractVBS%
->%extractVBS%  echo Set fso = CreateObject("Scripting.FileSystemObject")
->>%extractVBS% echo If NOT fso.FolderExists(%1) Then
->>%extractVBS% echo fso.CreateFolder(%1)
->>%extractVBS% echo End If
->>%extractVBS% echo set objShell = CreateObject("Shell.Application")
->>%extractVBS% echo set FilesInZip=objShell.NameSpace(%2).options
->>%extractVBS% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
->>%extractVBS% echo Set fso = Nothing
->>%extractVBS% echo Set objShell = Nothing
-cscript //nologo %extractVBS%
-if exist %extractVBS% del /f /q %extractVBS%
+set vbs="%temp%\unzip.vbs"
+>>%vbs% echo Set fso = CreateObject("Scripting.FileSystemObject")
+>>%vbs% echo If NOT fso.FolderExists(%1) Then
+>>%vbs% echo fso.CreateFolder(%1)
+>>%vbs% echo End If
+>>%vbs% echo set objShell = CreateObject("Shell.Application")
+>>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
+>>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
+>>%vbs% echo Set fso = Nothing
+>>%vbs% echo Set objShell = Nothing
+cscript //nologo %vbs%
+if exist %vbs% del /f /q %vbs%
+
 exit /B 0
