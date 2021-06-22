@@ -139,6 +139,7 @@
 .lua, Applications\nvim-qt.exe
 .m, Applications\nvim-qt.exe
 .mak, Applications\nvim-qt.exe
+.manifest, Applications\nvim-qt.exe
 .map, Applications\nvim-qt.exe
 .markdown, Applications\nvim-qt.exe
 .master, Applications\nvim-qt.exe
