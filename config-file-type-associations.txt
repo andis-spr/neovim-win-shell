@@ -136,6 +136,7 @@
 .log, Applications\nvim-qt.exe
 .ls, Applications\nvim-qt.exe
 .lsp, Applications\nvim-qt.exe
+.lst, Applications\nvim-qt.exe
 .lua, Applications\nvim-qt.exe
 .m, Applications\nvim-qt.exe
 .mak, Applications\nvim-qt.exe
@@ -194,6 +195,7 @@
 .r, Applications\nvim-qt.exe
 .rake, Applications\nvim-qt.exe
 .rb, Applications\nvim-qt.exe
+.rc, Applications\nvim-qt.exe
 .rdoc, Applications\nvim-qt.exe
 .rdoc_options, Applications\nvim-qt.exe
 .resx, Applications\nvim-qt.exe
